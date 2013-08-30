@@ -4,3 +4,6 @@ build/
 bin/
 node_modules/
 vendor/
+app/
+appDev/
+obj/

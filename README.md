@@ -1,32 +1,51 @@
-# [ngBoilerplate](http://joshdmiller.github.com/ng-boilerplate) [![Build Status](https://travis-ci.org/joshdmiller/ng-boilerplate.png?branch=master)](https://travis-ci.org/joshdmiller/ng-boilerplate)
+# Angular-Cafe
 
 An opinionated kickstarter for [AngularJS](http://angularjs.org) projects.
 
 ***
 
+This Project was forked from Josh Millers [ng-Boilerplate](http://joshdmiller.github.com/ng-boilerplate) and customized as [mvc-ng-boilerplate](https://github.com/gongin/mvc-ng-boilerplate/)
+
+If you want to learn more about the foundation of this project template please reference the documentation from the
+fork parent:
+
+* Josh Miller/ng-boilerplate/[Readme.md](http://joshdmiller.github.com/ng-boilerplate/README.md)
+
+***
+
+### --- NOTE: This document is under construction ---
+
+# Why MVC-Angular-Boilerplate
+
+There are many projects that focus on getting front end support started quickly.  This project addresses those hesitant on using Angular because they work in .Net/Windows environments.
+Just wiring Angular into a .Net application is a bit of a challenge and this project aims to simplify that.  Everything assumes you have Visual Studio 2012, however others
+may learn from the src folder as it is plain angular.
+This project template is to support front end (client-side) RESTful web application development using the **AngularJS** framework that makes API calls to MVC4 WebAPI protocols.
+***
+
 ## Quick Start
 
-Install Node.js and then:
+Install Node.js, git for windows and then:
 
-```sh
-$ git clone git://github.com/joshdmiller/ng-boilerplate
-$ cd ng-boilerplate
-$ sudo npm -g install grunt-cli karma bower
-$ npm install
-$ bower install
-$ grunt watch
+```cmd
+> git clone https://github.com/gongin/mvc-ng-boilerplate Mvc.ApplicationName
+> cd Mvc.ApplicationName
+> npm -g install grunt-cli karma bower
+> npm install
+> bower install
+> grunt watch
 ```
 
-Finally, open `build/index.html` in your browser.
+Finally, open `appDev/index.html` in your browser.
 
 Happy hacking!
 
 ## Purpose
 
-`ngBoilerplate` is designed to make life easy by providing a basic framework
+`mvcNgBoilerplate` is designed to make life easy by providing a basic framework
 with which to kickstart AngularJS projects. It contains a best-practice
 directory structure to ensure code reusability and maximum scalability.
-ngBoilerplate also comes prepackaged with the most popular design frameworks
+mvcNgBoilerplate also comes prepackaged with the most popular design frameworks
 around: [Twitter Bootstrap](http://getbootstrap.com),
 [Angular UI](http://angular-ui.github.io),
 [Angular Bootstrap](http://angular-ui.github.io/bootstrap),
@@ -37,8 +56,8 @@ All you have to do is clone it and start coding!
 
 ## Philosophy
 
-The principal goal of `ngBoilerplate` is to set projects up for long-term
-success.  So `ngBoilerplate` tries to follow best practices everywhere it can.
+The principal goal of `mvcNgBoilerplate` is to set projects up for long-term
+success.  So `mvcNgBoilerplate` tries to follow best practices everywhere it can.
 These are:
 
 - Properly orchestrated modules to encourage drag-and-drop component re-use.
@@ -56,9 +75,9 @@ These are:
 - Well-documented, to show new developers *why* things are set up the way they
   are.
 - It should be responsive to evidence. Community feedback is therefore crucial
-  to the success of `ngBoilerplate`.
+  to the success of `mvcNgBoilerplate`.
 
-But `ngBoilerplate` is not an example of an AngularJS app: this is a
+But `mvcNgBoilerplate` is not an example of an AngularJS app: this is a
 kickstarter. If you're looking for an example of what a complete, non-trivial
 AngularJS app that does something real looks like, complete with a REST backend
 and authentication and authorization, then take a look at
@@ -72,7 +91,7 @@ that - and does it well.
 At a high level, the structure looks roughly like this:
 
 ```
-ng-boilerplate/
+mvc-ng-boilerplate/
   |- build/
   |  |- angular/
   |- grunt-tasks/
@@ -125,7 +144,7 @@ learn more.
 ### Detailed Installation
 
 This section provides a little more detailed understanding of what goes into
-getting `ngBoilerplate` up and running. Though `ngBoilerplate` is really simple
+getting `mvcNgBoilerplate` up and running. Though `mvcNgBoilerplate` is really simple
 to use, it might help to have an understanding of the tools involved here, like
 Node.js and Grunt and Bower. If you're completely new to highly organized,
 modern JavaScript development, take a few short minutes to read [this overview
@@ -133,7 +152,7 @@ of the tools](tools.md) before continuing with this section.
 
 Okay, ready to go? Here it is:
 
-`ngBoilerplate` uses [Grunt](http://gruntjs.org) as its build system, so
+`mvcNgBoilerplate` uses [Grunt](http://gruntjs.org) as its build system, so
 [Node.js](http://nodejs.org) is required. Also, Grunt by default no longer comes
 with a command-line utility and Karma and Bower must end up in your global path
 for the build system to find it, so they must be installed independently. Once
@@ -151,7 +170,7 @@ from GitHub, or merge the branch into your existing repository. Assuming you're
 starting from scratch, simply clone this repository using git:
 
 ```sh
-$ git clone git://github.com/joshdmiller/ng-boilerplate my-project-name
+$ git clone git://github.com/joshdmiller/mvc-ng-boilerplate my-project-name
 $ cd my-project-name
 ```
 
@@ -165,7 +184,7 @@ This will read the `dependencies` (empty by default) and the `devDependencies`
 (which contains our build requirements) from `package.json` and install
 everything needed into a folder called `node_modules/`.
 
-There are many Bower packages used by `ngBoilerplate`, like Twitter Bootstrap
+There are many Bower packages used by `mvcNgBoilerplate`, like Twitter Bootstrap
 and Angular UI, which are listed in `bower.js`. To install them into the
 `vendor/` directory, simply run:
 
@@ -186,7 +205,7 @@ application (or we download it from a different computer), we can simply run the
 `bower install` command as above and all our dependencies will be installed for
 us. Neat!
 
-Technically, `ngBoilerplate` is now ready to go.
+Technically, `mvcNgBoilerplate` is now ready to go.
 
 However, prior to hacking on your application, you will want to modify the
 `package.json` file to contain your project's information. Do not remove any
@@ -242,7 +261,7 @@ $ grunt
 The best way to learn about the build system is by familiarizing yourself with
 Grunt and then reading through the heavily documented build script,
 `Gruntfile.js`. But you don't need to do that to be very productive with
-`ngBoilerplate`. What follows in this section is a quick introduction to the
+`mvcNgBoilerplate`. What follows in this section is a quick introduction to the
 tasks provided and should be plenty to get you started.
 
 The driver of the process is the `delta` multi-task, which watches for file
@@ -258,7 +277,7 @@ changes:
   values configured dynamically by Grunt.
 * `delta:less` - When any `*.less` file within `src/` changes, the
   `src/less/main.less` file is linted and copied into
-  `build/assets/ng-boilerplate.css`.
+  `build/assets/mvc-ng-boilerplate.css`.
 * `delta:jssrc` - When any JavaScript file within `src/` that does not end in
   `.spec.js` changes, all JavaScript sources are linted, all unit tests are run,
   and the all source files are re-copied to `build/src`.
@@ -314,68 +333,9 @@ uploading to the server! - is located in `bin/`, taking a cue from
 traditional software development. To test that your full site works as
 expected, open the `bin/index.html` file in your browser. Voila!
 
-### Live Reload!
 
-`ngBoilerplate` also includes [Live Reload](http://livereload.com/), so you no
-longer have to refresh your page after making changes! You need a Live Reload
-browser plugin for this:
-
-- Chrome - [Chrome Webstore](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
-- Firefox - [Download from Live Reload](http://download.livereload.com/2.0.8/LiveReload-2.0.8.xpi)
-- Safari - [Download from Live Reload](http://download.livereload.com/2.0.9/LiveReload-2.0.9.safariextz)
-- Internet Explorer - Surely you jest.
-
-Note that if you're using the Chrome version with `file://` URLs (as is the
-default with `ngBoilerplate`) you need to tell Live Reload to allow it. Go to
-`Menu -> Tools -> Extensions` and check the "Allow access to file URLs" box next
-to the Live Reload plugin.
-
-When you load your page, click the Live Reload icon in your toolbar and
-everything should work magically. w00t!
-
-If you'd prefer to not install a browser extension, then you must add the
-following to the end of the `body` tag in `index.html`:
-
-```html
-<script src="http://localhost:35729/livereload.js"></script>
-```
-
-Boom!
-
-## Roadmap
-
-This is a project that is not broad in scope, so there's not really much of a
-wish list here. But I would like to see a couple of things:
-
-I'd like it to be a little simpler. I want this to be a universal starting
-point. If someone is starting a new AngularJS project, she should be able to
-clone, merge, or download its source and immediately start doing what she needs
-without renaming a bunch of files and methods or deleting spare parts. What I
-have works for a first release, but I just think there is a little too much here
-right now.
-
-I'd also like to see a simple generator. Nothing like Yeoman, as there already
-is one of those, but just something that allows the user to say "I want
-Bootstrap but not Font Awesome and my app is called 'coolApp'. Gimme." Perhaps a
-custom download builder like UI Bootstrap has. Like that. Then again, perhaps
-some Yeoman generators wouldn't be out of line. I don't know. What do you think?
-
-Naturally, I am open to all manner of ideas and suggestions. See the
-"Contributing" section below.
 
 ### To Do
 
-See the [issues list](http://github.com/joshdmiller/ng-boilerplate/issues). And
+See the [issues list](http://github.com/gongin/mvc-ng-boilerplate/issues). And
 feel free to submit your own!
-
-### Contributing
-
-This is an opinionated kickstarter, but the opinions are fluid and
-evidence-based. Don't like the way I did something? Think you know of a better
-way? Have an idea to make this more useful? Let me know! You can contact me
-through all the usual channels or you can open an issue on the GitHub page. If
-you're feeling ambitious, you can even submit a pull request - how thoughtful
-of you!
-
-So join the team! We're good people.
-

@@ -1,8 +1,8 @@
-angular.module( 'ngBoilerplate', [
+angular.module( 'app', [
   'templates-app',
   'templates-common',
-  'ngBoilerplate.home',
-  'ngBoilerplate.about',
+  'home',
+  'about',
   'ui.state',
   'ui.route'
 ])
@@ -12,7 +12,7 @@ angular.module( 'ngBoilerplate', [
 })
 
 .run( function run ( titleService ) {
-  titleService.setSuffix( ' | ngBoilerplate' );
+  titleService.setSuffix( ' | Mvc-Ng-Boilerplate' );
 })
 
 .controller( 'AppCtrl', function AppCtrl ( $scope, $location ) {

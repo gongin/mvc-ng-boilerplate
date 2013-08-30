@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Landing Page</title>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div id="siteReady">
+        <div class="row-fluid">
+            <h2 class="offset2 span10">Select development or compiled (minified) site</h2>
+        </div>
+        <div class="row-fluid">
+            <a href="/appDev/" class="btn btn-primary btn-large offset2 span3">View Development Site</a>
+            <a href="/app/" class="btn btn-success btn-large offset2 span3">View Compiled Release Site</a>
+        </div>
+        <div class="container-fluid">
+        </div>
+    </div>
+    <div id="installation" class="container-fluid">
+        <div class="offset2 span8">
+            <h2>.Net MVC4 Angular Template</h2>
+            <div class="lead">This template will help you jumpstart your client-side angular mvc code using server-side .Net WebAPI.</div>
+            <hr />
+            The following steps are needed to get started (<a href="tools.md" target="_blank">Explanation of tools used)</a>.  If this is not your first time using these tools, skip to step 4.
+            <div class="accordion" id="accordion2">
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">1. Install NodeJs
+                        </a>
+                    </div>
+                    <div id="collapseOne" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            [Node.js](<a href="http://nodejs.org" target="_blank">http://nodejs.org</a>) is a platform based on Chrome's JavaScript runtime,
+called [V8](http://code.google.com/p/v8/). It allows you to develop all kinds of
+software using JavaScript.
+
+A great feature of Node.js is its wide variety of existing libraries and tools.
+As the developer community is absolutely massive and incredibly active, Node.js
+has a basic package manager called <strong>NPM</strong> that you can use to install Node.js-based
+software and libraries from the command line.
+
+While `MVC-NG-Boilderplate` makes heavy use of Node.js behind the scenes, you as the
+application developer don't need to really think about it much. Most of the
+interaction with Node.js will occur through <a href="tools.md" target="_blank">Grunt</a>, so you
+really only need to know how get the initial setup working.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">2. Install GIT for Windows
+                        </a>
+                    </div>
+                    <div id="collapseTwo" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            [Git](<a href="http://git-scm.com/" target="_blank">http://git-scm.com/</a>) is a distributed version control system.
+`MVC-NG-Boilerplate` uses git to manage its codebase. While in theory you don't have
+to use Git once you download `MVC-NG-Boilerplate`, this project makes the assumption
+that you do. If you're on GitHub, I assume you already have a basic
+understanding of Git, which is all you need to make effective use of this
+project. You just need to be able to commit and push and junk - nothing funky.
+If you're not familiar with it, check out the documentation linked to above.
+GitHub also has a great [help section](https://help.github.com/).  Bower package manager makes use of this to install packages.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">3. Change GIT download options
+                        </a>
+                    </div>
+                    <div id="collapseThree" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            Run the following command to change the download options for git to https which will help with firewall protocol issues.
+                            <pre>git config --global url."https://".insteadOf git://</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">4. Install required tools global
+                        </a>
+                    </div>
+                    <div id="collapseFour" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            Run the following command in CMD or Git-Bash
+                            <pre>npm install -g grunt-cli karma bower</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">5. Install package.json dependencies
+                        </a>
+                    </div>
+                    <div id="collapseFive" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            Run the following command in CMD or Git-Bash in the project folder
+                            <pre>npm install</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix">6. Install bower.json dependencies
+                        </a>
+                    </div>
+                    <div id="collapseSix" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            Run the following command in CMD or Git-Bash in the project folder
+                            <pre>bower install</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSeven">7. Run Grunt to build and compile your application
+                        </a>
+                    </div>
+                    <div id="collapseSeven" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            Run the following command in CMD or Git-Bash in the project folder:
+                            For continuous building
+                            <pre>grunt watch</pre>
+                            To just build 
+                            <pre>grunt build</pre>
+                            To compile for production release (post building)
+                            <pre>grunt compile</pre>
+                            To build and compile
+                            <pre>grunt</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="row">
+        <div class="offset2">
+            <a href="#readme" role="button" class="btn btn-info" data-toggle="modal">View Readme</a>
+            <a href="#tools" role="button" class="btn btn-info" data-toggle="modal">View Tools Used</a>
+            <a href="#changelog" role="button" class="btn btn-info" data-toggle="modal">View Changelog</a>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="readme" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Readme</h3>
+        </div>
+        <div class="modal-body" id="readmeBody">
+            <p>Readme file could not be found!</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+    </div>
+
+    <div id="tools" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="H1">Tools</h3>
+        </div>
+        <div class="modal-body" id="toolsBody">
+            <p>Tools file could not be found!</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+    </div>
+
+    <div id="changelog" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="H2">Changelog</h3>
+        </div>
+        <div class="modal-body" id="changelogBody">
+            <p>Changelog file could not be found!</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            function UrlExists(url) {
+                var http = new XMLHttpRequest();
+                http.open('HEAD', url, false);
+                http.send();
+                return http.status != 404;
+            }
+
+            if (!UrlExists("vendor/angular/angular.js") || !UrlExists("appDev/index.html")) {
+                $("#siteReady").hide();
+                $("#installation").show();
+            } else {
+                $("#siteReady").show();
+                $("#installation").hide();
+            }
+
+            $("#readmeBody").load("http://markdown.io/https://raw.github.com/gongin/mvc-ng-boilerplate/master/README.md #md-content");
+            $("#toolsBody").load("http://markdown.io/https://raw.github.com/gongin/mvc-ng-boilerplate/master/tools.md #md-content");
+            $("#changelogBody").load("http://markdown.io/https://raw.github.com/gongin/mvc-ng-boilerplate/master/CHANGELOG.md #md-content");
+        });
+    </script>
+</body>
+</html>

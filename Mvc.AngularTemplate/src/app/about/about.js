@@ -5,7 +5,7 @@ angular.module( 'about', [
   'titleService'
 ])
 
-.config(function config( $stateProvider ) {
+.config(['$stateProvider', function ( $stateProvider ) {
   $stateProvider.state( 'about', {
     url: '/about',
     views: {
@@ -15,17 +15,17 @@ angular.module( 'about', [
       }
     }
   });
-})
+}])
 
-.controller( 'AboutCtrl', function AboutCtrl( $scope, titleService ) {
+.controller( 'AboutCtrl', ['$scope', 'titleService', function ( $scope, titleService ) {
   titleService.setTitle( 'What is It?' );
   
-  // This is simple a demo for UI Boostrap.
+  // This is simple demo for UI Boostrap.
   $scope.dropdownDemoItems = [
     "The first choice!",
     "And another choice for you.",
     "but wait! A third!"
   ];
-})
+}])
 
 ;

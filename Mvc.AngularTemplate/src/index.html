@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html ng-app="app" ng-controller="AppCtrl">
-  <head>
+<head>
+    <!-- Base ref for having multiple applications.  If using debug mode needs to be appDev.  Release is app. -->
+    <base href="/appDev/">
     <title>mvc-ng-boilerplate</title>
 
+    <meta name="fragment" content="!" />
     <meta property="og:title" content="mvcNgBoilerplate" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://bit.ly/mvcNgBoilerplate" />
@@ -12,90 +15,94 @@
     <!-- font awesome from BootstrapCDN -->
     <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
-    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
-    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+    <!-- compiled CSS -->
+    <% styles.forEach( function ( file ) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>" />
+    <% }); %>
 
     <!--[if IE 7>
     <link rel="stylesheet" href="assets/font-awesome-ie7.min.css />
     <![endif]-->
 
-    <!-- compiled CSS --><% scripts.forEach( function ( file ) { %>
-    <script type="text/javascript" src="<%= file %>"></script><% }); %>
-  </head>
-  <body>
+    <!-- compiled CSS -->
+    <% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="<%= file %>"></script>
+    <% }); %>
+</head>
+<body>
     <div class="container">
-      <div class="masthead">
-        <h3 class="muted">mvc-ng-boilerplate <small><a
-              href="http://github.com/gongin/mvc-ng-boilerplate/mvc-ng-boilerplate/blob/master/CHANGELOG.md">v<%= version %></a></small></h3>
-        <div class="navbar">
-          <div class="navbar-inner">
-            <div class="container">
-              <ul class="nav">
-                <li ui-route="/home" ng-class="{active:$uiRoute}">
-                  <a href="#/home">
-                    <i class="icon-home"></i>
-                    Home
-                  </a>
-                </li>
-                <li ui-route="/about" ng-class="{active:$uiRoute}">
-                  <a href="#/about">
-                    <i class="icon-info-sign"></i>
-                    What is it?
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/joshdmiller/ng-boilerplate#readme">
-                    <i class="icon-book"></i>
-                    Read the Docs
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/gongin/mvc-ng-boilerplate">
-                    <i class="icon-github-alt"></i>
-                    Github
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/gongin/mvc-ng-boilerplate/issues">
-                    <i class="icon-comments"></i>
-                    Support
-                  </a>
-                </li>
-              </ul>
+        <div class="masthead">
+            <h3 class="muted">mvc-ng-boilerplate <small><a
+                href="http://github.com/gongin/mvc-ng-boilerplate/mvc-ng-boilerplate/blob/master/CHANGELOG.md">v<%= version %></a></small></h3>
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <ul class="nav">
+                            <li ui-route="/home" ng-class="{active:$uiRoute}">
+                                <a href="home">
+                                    <i class="icon-home"></i>
+                                    Home
+                                </a>
+                            </li>
+                            <li ui-route="/about" ng-class="{active:$uiRoute}">
+                                <a href="about">
+                                    <i class="icon-info-sign"></i>
+                                    What is it?
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/joshdmiller/ng-boilerplate#readme">
+                                    <i class="icon-book"></i>
+                                    Read the Docs
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/gongin/mvc-ng-boilerplate">
+                                    <i class="icon-github-alt"></i>
+                                    Github
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/gongin/mvc-ng-boilerplate/issues">
+                                    <i class="icon-comments"></i>
+                                    Support
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
 
-    <div class="container" ui-view="main"></div>
+    <div class="container" ui-view></div>
 
     <footer class="footer">
-      <div class="container">
-        <div class="footer-inner">
-          <ul class="social">
-            <li><a target="_blank" href="http://gplus.to/joshuacaudill"><i class="icon-google-plus-sign"></i></a></li>
-            <li><a target="_blank" href="http://twitter.com/jcaudill81"><i class="icon-twitter-sign"></i></a></li>
-            <li><a target="_blank" href="https://www.linkedin.com/in/joshuacaudill"><i class="icon-linkedin-sign"></i></a></li>
-            <li><a target="_blank" href="http://github.com/gongin/mvc-ng-boilerplate"><i class="icon-github-sign"></i></a></li>
-          </ul>
-          
+        <div class="container">
+            <div class="footer-inner">
+                <ul class="social">
+                    <li><a target="_blank" href="http://gplus.to/joshuacaudill"><i class="icon-google-plus-sign"></i></a></li>
+                    <li><a target="_blank" href="http://twitter.com/jcaudill81"><i class="icon-twitter-sign"></i></a></li>
+                    <li><a target="_blank" href="https://www.linkedin.com/in/joshuacaudill"><i class="icon-linkedin-sign"></i></a></li>
+                    <li><a target="_blank" href="http://github.com/gongin/mvc-ng-boilerplate"><i class="icon-github-sign"></i></a></li>
+                </ul>
 
-          <p>
-            (c) 2013 Josh David Caudill. 
+
+                <p>
+                    (c) 2013 Josh David Caudill. 
             <a href="http://github.com/gongin/mvc-ng-boilerplate/fork_select">Fork this</a>
-            to kickstart your next project.
+                    to kickstart your next project.
             <br />
-            mvc-ng-boilerplate is based on
+                    mvc-ng-boilerplate is based on
             <a href="http://www.angularjs.org">AngularJS</a>,
             <a href="http://getbootstrap.com">Bootstrap</a>, 
             <a href="http://angular-ui.github.com/bootstrap">UI Bootstrap</a>,
             <a href="http://fortawesome.github.com/Font-Awesome">Font Awesome</a>,
               and
-            <a href="https://github.com/joshdmiller/ng-boilerplate">ng-Boilerplate</a>                      
-          </p>
+            <a href="https://github.com/joshdmiller/ng-boilerplate">ng-Boilerplate</a>
+                </p>
+            </div>
         </div>
-      </div>
     </footer>
-  </body>
+</body>
 </html>

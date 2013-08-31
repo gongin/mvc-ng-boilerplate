@@ -22,7 +22,7 @@ angular.module( 'home', [
  * will handle ensuring they are all available at run-time, but splitting it
  * this way makes each module more "self-contained".
  */
-.config(function config( $stateProvider ) {
+.config(['$stateProvider', function ( $stateProvider ) {
   $stateProvider.state( 'home', {
     url: '/home',
     views: {
@@ -32,14 +32,14 @@ angular.module( 'home', [
       }
     }
   });
-})
+}])
 
 /**
  * And of course we define a controller for our route.
  */
-.controller( 'HomeCtrl', function HomeController( $scope, titleService ) {
+.controller( 'HomeCtrl', ['$scope', 'titleService', function ( $scope, titleService ) {
   titleService.setTitle( 'Home' );
-})
+}])
 
 ;
 

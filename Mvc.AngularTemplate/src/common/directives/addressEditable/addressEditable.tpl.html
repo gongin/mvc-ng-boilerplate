@@ -1,0 +1,22 @@
+﻿<div class="addressEditable span12">
+    <div class="title">{{title}}</div>
+    <div class="body">
+        <div class="control-group">
+            <div class="controls">
+                <input type="text" placeholder="Address1" title="Enter Address 1" ng-model="address.address1" class="span12"/>
+            </div>
+            <div class="controls">
+                <input type="text" placeholder="Address2" title="Enter Address 2" ng-model="address.address2" class="span12" />
+            </div>
+            <div class="controls controls-row">
+                <input type="text" placeholder="City" title="Enter City" ng-model="address.city" class="span8" />
+                <input type="text" placeholder="State" title="Enter State Code" ng-model="address.state" class="span4" pattern="[a-zA-Z]{2}" />
+            </div>
+            <div class="controls controls-row">
+                <input type="text" placeholder="Zip-5" title="Enter Zip 5" ng-model="address.zip5" class="span5" pattern="\d{5}" />
+                <input type="text" placeholder="Zip-4" title="Enter Zip 4" ng-model="address.zip4" class="span4" pattern="\d{4}" />
+                <button type="button" class="btn btn-danger span3" ng-click="onremoveAddress()"><i class="icon-trash"></i></button>
+            </div>
+        </div>
+    </div>
+</div>

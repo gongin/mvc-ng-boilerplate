@@ -161,6 +161,13 @@
     <Content Include="src\app\home\home.js" />
     <Content Include="src\app\home\home.spec.js" />
     <Content Include="src\app\home\home.tpl.html" />
+    <Content Include="src\app\search\search-query.tpl.html" />
+    <Content Include="src\app\search\search-results.tpl.html" />
+    <Content Include="src\app\search\search.js" />
+    <Content Include="src\app\search\search.spec.js" />
+    <Content Include="src\app\search\search.tpl.html" />
+    <Content Include="src\common\directives\addressEditable\addressEditable.js" />
+    <Content Include="src\common\directives\addressEditable\addressEditable.tpl.html" />
     <Content Include="src\index.html" />
     <Content Include="vendor\placeholders\angular-placeholders-0.0.1-SNAPSHOT.min.js" />
     <Content Include="Web.config">
@@ -186,12 +193,17 @@
     <Content Include="src\README.md" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="src\common\directives\" />
     <Folder Include="src\common\resources\" />
     <Folder Include="src\common\security\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\app\search\search.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\common\directives\addressEditable\addressEditable.less" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -211,7 +223,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>20307</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:9139/</IISUrl>
+          <IISUrl>http://localhost:20307/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

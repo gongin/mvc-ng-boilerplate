@@ -1,0 +1,18 @@
+﻿.addressEditable {
+  border: 1px solid black;
+  display: inline-block;
+}
+.addressEditable.opened > .title:before { content: '\21D3 '; }
+.addressEditable.opened > .body { display: block; }
+.addressEditable.closed > .title:before { content: '\21D2 '; }
+.addressEditable.closed > .body { display: none; }
+.addressEditable > .title {
+  background-color: steelblue;
+  color: white;
+  padding: .1em .3em;
+  cursor: pointer;
+}
+.addressEditable > .body {
+  padding: .1em .3em;
+}
+

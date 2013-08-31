@@ -4,20 +4,21 @@
     <small>For the lazy and impatient.</small>
   </h1>
   <p>
-    <code>ng-boilerplate</code> is an opinionated kickstarter for web
-    development projects. It's an attempt to create a simple starter for new
+    <code>mvc-ng-boilerplate</code> is an opinionated kickstarter for web
+    development projects based on <code>ng-boilerplate</code>. It's an attempt to create a simple starter for new
     web sites and apps: just download it and start coding. The goal is to
     have everything you need to get started out of the box; of course it has
     slick styles and icons, but it also has a best practice directory structure
-    to ensure maximum code reuse. And it's all tied together with a robust
+    to ensure maximum code reuse.  Additionally, it is ready for VS 2012 MVC4 so 
+    you don't have to struggle with wiring the two architectures together. And it's all tied together with a robust
     build system chock-full of some time-saving goodness.
   </p>
 
   <h2>Why?</h2>
 
   <p>
-    Because my team and I make web apps, and 
-    last year AngularJS became our client-side framework of choice. We start
+    Because every website <em>should</em> start the same, and 
+     AngularJS has become my client-side framework of choice. We start
     websites the same way every time: create a directory structure, copy and
     ever-so-slightly tweak some config files from an older project, and yada
     yada, etc., and so on and so forth. Why are we repeating ourselves? We wanted a starting point; a set of
@@ -29,14 +30,16 @@
     There are other similar projects out there, but none of them suited our
     needs. Some are awesome but were just too much, existing more as reference
     implementations, when we really just wanted a kickstarter. Others were just
-    too little, with puny build systems and unscalable architectures.  So we
-    designed <code>ng-boilerplate</code> to be just right.
+    too little, with puny build systems and unscalable architectures.  None integrated with 
+    Visual Studio which is the tool I have to use and wanted the WebAPI backend. So I
+    designed <code>mvc-ng-boilerplate</code> to be just right.
   </p>
 
   <h2>What ng-boilerplate Is Not</h2>
 
   <p>
-    This is not an example of an AngularJS app. This is a kickstarter. If
+    This is not an example of an AngularJS app. This is a kickstarter.  It has a demo section
+    in the about page to show you how to interact with the REST WebAPI, but that's it. If
     you're looking for an example of what a complete, non-trivial AngularJS app
     that does something real looks like, complete with a REST backend and
     authentication and authorization, then take a look at <code><a
@@ -50,9 +53,9 @@
   </h1>
   <p>
     This section is just a quick introduction to all the junk that comes
-    pre-packaged with <code>ng-boilerplate</code>. For information on how to
+    pre-packaged with <code>mvc-ng-boilerplate</code>. For information on how to
     use it, see the <a
-      href="https://github.com/joshdmiller/ng-boilerplate#readme">project page</a> at
+      href="https://github.com/gongin/mvc-ng-boilerplate#readme">project page</a> at
     GitHub.
   </p>
 
@@ -72,7 +75,7 @@
   </p>
 
   <p>
-    And, of course, <code>ng-boilerplate</code> is built on <a href="http://angularjs.org">AngularJS</a>,
+    And, of course, <code>mvc-ng-boilerplate</code> is built on <a href="http://angularjs.org">AngularJS</a>,
     by the far the best JavaScript framework out there! But if you don't know
     that already, then how did you get here? Well, no matter - just drink the
     Kool Aid. Do it. You know you want to.
@@ -90,7 +93,7 @@
     version of Bootstrap is as simple as: 
   </p>
 
-  <pre>$ cd vendor/twitter-bootstrap<br />$ git pull origin master</pre>
+  <pre>&gt; cd vendor/twitter-bootstrap<br />&gt; git pull origin master</pre>
 
   <p>
     Boom! And victory is ours.
@@ -199,67 +202,8 @@
 
   <p>
     This is a project that is <i>not</i> broad in scope, so there's not really
-    much of a wish list here. But I would like to see a couple of things:
+    much of a wish list here.
   </p>
 
-  <p>
-    I'd like it to be a little simpler. I want this to be a universal starting
-    point. If someone is starting a new AngularJS project, she should be able to
-    clone, merge, or download its source and immediately start doing what she
-    needs without renaming a bunch of files and methods or deleting spare parts
-    ... like this page. This works for a first release, but I just think there
-    is a little too much here right now.
-  </p>
-
-  <p>
-    I'd also like to see a simple generator. Nothing like <a href="yeoman.io">
-    Yeoman</a>, as there already is one of those, but just something that
-    says "I want Bootstrap but not Font Awesome and my app is called 'coolApp'.
-    Gimme." Perhaps a custom download builder like UI Bootstrap
-    has. Like that. Then again, perhaps some Yeoman generators wouldn't be out
-    of line. I don't know. What do you think?
-  </p>
-
-  <p>
-    Naturally, I am open to all manner of ideas and suggestions. See the "Can I
-    Help?" section below.
-  </p>
-
-  <h2>The Tactical To Do List</h2>
-
-  <p>
-    There isn't much of a demonstration of UI Bootstrap. I don't want to pollute
-    the code with a demo for demo's sake, but I feel we should showcase it in
-    <i>some</i> way.
-  </p>
-
-  <p>
-    <code>ng-boilerplate</code> should include end-to-end tests. This should
-    happen soon. I just haven't had the time.
-  </p>
-
-  <p>
-    Lastly, this site should be prettier, but I'm no web designer. Throw me a
-    bone here, people!
-  </p>
-
-  <h2>Can I Help?</h2>
-
-  <p>
-    Yes, please!
-  </p>
-
-  <p>
-    This is an opinionated kickstarter, but the opinions are fluid and
-    evidence-based. Don't like the way I did something? Think you know of a
-    better way? Have an idea to make this more useful? Let me know! You can
-    contact me through all the usual channels or you can open an issue on the
-    GitHub page. If you're feeling ambitious, you can even submit a pull
-    request - how thoughtful of you!
-  </p>
-
-  <p>
-    So join the team! We're good people.
-  </p>
 </div>
 

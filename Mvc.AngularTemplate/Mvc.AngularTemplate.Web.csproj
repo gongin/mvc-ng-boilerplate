@@ -154,7 +154,7 @@
     <Content Include="package.json" />
     <Content Include="Gruntfile.js" />
     <Content Include="index.html" />
-    <Content Include="src\app\about\about.js" />
+    <Content Include="src\app\home\about.js" />
     <Content Include="src\app\about\about.tpl.html" />
     <Content Include="src\app\app.js" />
     <Content Include="src\app\app.spec.js" />
@@ -204,6 +204,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="src\common\directives\addressEditable\addressEditable.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\app\about\about.coffee" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\app\about\about.spec.coffee" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,6 +1,6 @@
 angular.module( 'titleService', [])
 
-.factory 'titleService', ( $document ) ->
+.factory 'titleService', ['$document', ( $document ) ->
   suffix = title = ""
 
   {
@@ -21,4 +21,4 @@ angular.module( 'titleService', [])
     getTitle: () ->
       $document.prop 'title'
   }
-
+]

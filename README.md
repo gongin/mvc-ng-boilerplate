@@ -1,4 +1,4 @@
-# Angular-Cafe
+# MVC-Angular-Boilerplate
 
 An opinionated kickstarter for [AngularJS](http://angularjs.org) projects.
 
